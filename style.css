@@ -18,18 +18,37 @@ img{
     padding: 30px;
     margin: auto;
     background-color: rgb(203, 217, 201);
+    line-height: 1.75;
+}
+figcaption{
+    line-height: initial;
 }
 .info{
     width: 90%;
     margin: auto;
     padding: 5px;
-    padding-left: 65px;
+    padding-left: 25px;
     border-color: rgb(187, 194, 198);
     border-width: 1px;
     border-style: solid;
     border-left-width: 4px;
     border-left-color: hsl(215, 50%, 68%);
     background-color: rgb(180, 212, 245);
+    line-height: initial;
+}
+.info-icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+    margin-right: 10px;
+    border: 2px solid rgb(187, 194, 198);
+    color: white;
+    background-color: rgb(96, 158, 246);
+    font-size: 2.2em;
+    font-family: serif;
+    border-radius: 50%;
+    text-align: center;
 }
 .nav-menu{
     width: 120px;
@@ -46,9 +65,14 @@ img{
 .nav-list{
     padding-left: 30px;
 }
-.icon{
-    width: 35px;
-    height: 35px;
+.video{
+    display: block;
+    width: 100%;
+}
+code{
+    padding: 2px 4px;
+    border: 2px solid rgb(187, 194, 198);
+    background-color: white;
 }
 .table-history{
     border-collapse: collapse;
@@ -63,6 +87,14 @@ img{
 .table-history th{
     color: rgb(0, 84, 168);
     background-color:rgb(234, 236, 240);
+}
+.icon{
+    width: 150px;
+}
+.icon-style{
+    background-color: #dde2e6;
+    border: 2px solid #c3c5c9;
+    padding: 15px;
 }
 .float-right{
     float: right;
