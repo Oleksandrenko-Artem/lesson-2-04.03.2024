@@ -22,8 +22,15 @@ main{
 }
 .main-menu-item{
     display: inline-block;
-    margin: 0 1.2em;
+    margin: 0 0.30em;
+    padding-bottom: 30px;
     position: relative;
+}
+.main-menu-item::after{
+    content: "\25BC";
+}
+.main-menu-item:hover::after{
+    content: "\25B2";
 }
 .main-menu-item>a{
     color: black;
@@ -36,11 +43,23 @@ main{
 .main-menu-item:hover>.submenu{
     display: block;
 }
+.main-menu-item>.submenu::after{
+    content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #FFFFFF transparent;
+        top: -18px;
+        left: 42%;
+}
 .submenu{
     left: 0;
     width: 100%;
     display: none;
     position: absolute;
+    top: 30px;
     left: -50%;
     list-style: none;
     padding: 7px;
@@ -66,6 +85,12 @@ main{
 .submenu-item{
     position: relative;
 }
+.submenu-item:has(>.submenu)::after{
+    content: "\1433";
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
 .submenu-item:hover>.submenu{
     display: block;
     left: 100%;
@@ -80,4 +105,16 @@ main{
 .submenu-item:hover>.submenu-link, .submenu-link:hover{
     background-color: rgb(232, 233, 255);
     color: blue;
+}
+.explore::before{
+    display: inline-block;
+    width: 15px;
+    transform: translate(-3px, 2px);
+    content: url(./../icons/book-open-blank-variant.svg)
+}
+.home::before{
+    display: inline-block;
+    width: 15px;
+    transform: translate(-3px, 2px);
+    content: url(./../icons/home.svg);
 }
